@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: active_admin_dev
+
+test:
+  <<: *default
+  database: active_admin_dev
+
+production:
+  <<: *default
+  database: active_admin_dev
